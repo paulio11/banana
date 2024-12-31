@@ -8,10 +8,12 @@ Ideal as a starting point for future projects.
 
 - User registration and login
 - Account deletion
-- Avatar and bio customization
+- Customizable profile (avatar and bio)
 - Username and password updates
-- Display a list of users
-- View any user's profile
+- List of users
+- View user profiles
+- 404 error page for missing content
+- Network error page for server issues
 
 ## Deployment
 
