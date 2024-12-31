@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { formatDate } from "../utils/DateFormatting";
 
 const UserList = () => {
-  const [users, setUsers] = useState({});
+  const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ const UserList = () => {
           </tr>
         </thead>
         <tbody>
-          {users?.map((user, i) => (
+          {users.map((user, i) => (
             <tr key={i}>
               <td>{user.owner}</td>
               <td>
