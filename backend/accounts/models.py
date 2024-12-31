@@ -1,7 +1,7 @@
 import os
 from django.db import models
 from django.contrib.auth.models import User
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, post_delete
 from django_resized import ResizedImageField
 
 
@@ -36,4 +36,11 @@ def create_profile(sender, instance, created, **kwargs):
         Profile.objects.create(owner=instance)
 
 
+def delete_avatar_file(sender, instance, **kwargs):
+    if instance.avatar and instance.avatar.name != "avatars/default_avatar.jpg":
+        if os.path.isfile(instance.avatar.path):
+            os.remove(instance.avatar.path)
+
+
 post_save.connect(create_profile, sender=User)
+post_delete.connect(delete_avatar_file, sender=Profile)

@@ -47,3 +47,7 @@ coverage.xml
 *.eggs
 *.cache
 *.benchmarks
+
+# Avatar folder contents
+/media/avatars/*
+!/media/avatars/default_avatar.jpg
