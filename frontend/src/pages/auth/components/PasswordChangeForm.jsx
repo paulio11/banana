@@ -45,7 +45,7 @@ const PasswordChangeForm = () => {
       <h3>Change password</h3>
       <form onSubmit={handleSubmit}>
         <input
-          type="text"
+          type="password"
           name="old_password"
           placeholder="Old password"
           value={old_password}
@@ -55,7 +55,7 @@ const PasswordChangeForm = () => {
         {messages?.old_password && <span>{messages.old_password}</span>}
         <br />
         <input
-          type="text"
+          type="password"
           name="new_password1"
           placeholder="New password"
           value={new_password1}
@@ -65,7 +65,7 @@ const PasswordChangeForm = () => {
 
         <br />
         <input
-          type="text"
+          type="password"
           name="new_password2"
           placeholder="Confirm new password"
           value={new_password2}
