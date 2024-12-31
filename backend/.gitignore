@@ -1,0 +1,49 @@
+# Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Django specific
+*.log
+*.pot
+*.py[cod]
+*.sqlite3
+db.sqlite3
+.env
+*.env
+*.local
+
+# Virtual environments
+venv/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*.orig
+*.bak
+
+# macOS specific
+.DS_Store
+
+# Windows specific
+Thumbs.db
+ehthumbs.db
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Testing and profiling
+.pytest_cache/
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.egg
+*.eggs
+*.cache
+*.benchmarks
